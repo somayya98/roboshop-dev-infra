@@ -4,7 +4,7 @@ data "aws_ami" "openvpn" {
     
     filter {
         name   = "name"
-        values = ["OpenVPN Access Server Community Image-8fbe3379-*"]
+        values = ["OpenVPN Access Server Community Image-8fbe3379-63b6-43e8-87bd-0e93fd7be8f3"]
     }
 
     filter {
@@ -25,5 +25,4 @@ data "aws_ssm_parameter" "openvpn_sg_id" {
 data "aws_ssm_parameter" "public_subnet_ids" {
   name = "/${var.project_name}/${var.environment}/public_subnet_ids"
 }
-
 
